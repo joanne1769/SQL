@@ -1,0 +1,24 @@
+I have created a store data base and stats for the store
+create table produce (id integer primary key, name text, price integer, aisle integer, code integer);
+
+insert into produce values (1,"bananas", 1.50, 3, 5547);
+insert into produce values (2, "apples", 0.52, 1, 7748);
+insert into produce values (3, "grapes", 1.00, 1, 8859);
+insert into produce values (4, "mushrooms", 1.25, 3, 4152);
+insert into produce values (5, "onions", 0.99, 2, 9658);
+insert into produce values (6, "peppers", 0.25, 3, 1205);
+insert into produce values (7, "eggplant", 1.69, 4, 0021);
+insert into produce values (8, "squash", 0.50, 1, 1452);
+ insert into produce values (9, "watermelon", 1.99, 3, 2036);
+ insert into produce values (10, "green_beans", 0.99, 2, 3654);
+insert into produce values (11, "okra", 0.25, 1, 5478);
+insert into produce values (12, "lettuce", 1.25, 2, 5214);
+insert into produce values (13, "spinach", 0.99, 2, 6325);
+insert into produce values (14, "basil", 0.50, 1, 6985);
+insert into produce values (15, "dill", 0.25, 1, 4517);
+
+select * from produce order by price;
+select sum(price) from produce;
+select name, aisle from produce order by aisle;
+
+I have made a table showing all the rows and added up the price of all the items as well as sorted them by aisle
