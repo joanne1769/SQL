@@ -1,0 +1,30 @@
+/* What does the app's SQL look like? */
+/*create a table to show how to update/add/delete tables*/
+
+create table fit_app (id integer primary key autoincrement, date text, calories_burned integer, calories_consumed integer);
+ insert into fit_app values (1, "2023-01-02", 526, 2569);
+ insert into fit_app values (2, "2023-01-03", 632, 2332);
+ insert into fit_app values (3, "2023-01-05", 668, 2748);
+  
+ select * from fit_app;
+ /*update table to adjust the amount of calories burned*/
+ 
+ update fit_app set calories_burned=2700 where id=1;
+ 
+ select * from fit_app;
+ /*alter the table to add current weitght column*/
+ 
+ alter table fit_app add current_weight integer;
+ /*add a row adding the new column of current weight*/
+ 
+ insert into fit_app values (4, "2023-01-07", 447, 2602, 185);
+ 
+ select * from fit_app;
+  /*delete a selected row from the table*/
+  
+  delete from fit_app where id=2;
+   
+   select * from fit_app;
+   
+ 
+ 
