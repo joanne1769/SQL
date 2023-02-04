@@ -1,0 +1,22 @@
+How many movies are in the data base?
+select count(*)
+from "CharlotteChaze/BreakIntoTech"."netflix_titles_info" where type='Movie';
+
+When was the most recent movie/tv show added?
+select max(date(date_added))
+from "CharlotteChaze/BreakIntoTech"."netflix_titles_info";
+
+List all the movie/tv shows in alpha order
+select title
+from "CharlotteChaze/BreakIntoTech"."netflix_titles_info" order by title asc;
+
+Who is the director of Bright Star?
+select director
+from "CharlotteChaze/BreakIntoTech"."netflix_titles_info" titles  join 
+"CharlotteChaze/BreakIntoTech"."netflix_people" people
+on titles.show_id=people.show_id where titles.title='Bright Star';
+
+What is the oldest movie and year added to the data base?
+select title, date_added
+from "CharlotteChaze/BreakIntoTech"."netflix_titles_info" 
+where type='Movie' order by release_year limit 1;
